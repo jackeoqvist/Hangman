@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_guessString = new System.Windows.Forms.Button();
+            this.btn_guessChar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -52,28 +52,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(353, 222);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 240);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(353, 60);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,31 +60,36 @@
             this.panel1.Size = new System.Drawing.Size(194, 269);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // groupBox2
             // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Gissa Bokstav";
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(353, 222);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(143, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Gissa Ord";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(279, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ord längd:";
             // 
-            // textBox1
+            // groupBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 21);
-            this.textBox1.MaxLength = 1;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(28, 20);
-            this.textBox1.TabIndex = 2;
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.btn_guessString);
+            this.groupBox3.Controls.Add(this.btn_guessChar);
+            this.groupBox3.Location = new System.Drawing.Point(12, 240);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(353, 60);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
             // 
             // textBox2
             // 
@@ -115,24 +98,42 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
             // 
-            // label1
+            // textBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(231, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ord längd:";
+            this.textBox1.Location = new System.Drawing.Point(98, 21);
+            this.textBox1.MaxLength = 1;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(28, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // button3
+            // btn_guessString
             // 
-            this.button3.Location = new System.Drawing.Point(235, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_guessString.Location = new System.Drawing.Point(143, 19);
+            this.btn_guessString.Name = "btn_guessString";
+            this.btn_guessString.Size = new System.Drawing.Size(86, 23);
+            this.btn_guessString.TabIndex = 2;
+            this.btn_guessString.Text = "Gissa Ord";
+            this.btn_guessString.UseVisualStyleBackColor = true;
+            this.btn_guessString.Click += new System.EventHandler(this.btn_guessString_Click);
+            // 
+            // btn_guessChar
+            // 
+            this.btn_guessChar.Location = new System.Drawing.Point(6, 19);
+            this.btn_guessChar.Name = "btn_guessChar";
+            this.btn_guessChar.Size = new System.Drawing.Size(86, 23);
+            this.btn_guessChar.TabIndex = 0;
+            this.btn_guessChar.Text = "Gissa Bokstav";
+            this.btn_guessChar.UseVisualStyleBackColor = true;
+            this.btn_guessChar.Click += new System.EventHandler(this.btn_guessChar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fel: ";
             // 
             // Form1
             // 
@@ -146,6 +147,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Hangman";
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -164,9 +166,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_guessString;
+        private System.Windows.Forms.Button btn_guessChar;
+        private System.Windows.Forms.Label label2;
     }
 }
 
